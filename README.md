@@ -91,15 +91,79 @@
 
 * [Alibaba/clusterdata](https://github.com/alibaba/clusterdata)
 * [Azure/AzurePublicDataset](https://github.com/Azure/AzurePublicDataset)
+  * 
 * [Google/cluster-data](https://github.com/google/cluster-data)
 * [The Numenta Anomaly Benchmark(NAB)](https://github.com/numenta/NAB)
 * [Yahoo: A Labeled Anomaly Detection Dataset](https://webscope.sandbox.yahoo.com/catalog.php?datatype=s&did=70)
 * [港中文loghub数据集](https://github.com/logpai/loghub)
 * [2018 AIOPS挑战赛预赛测试集](http://iops.ai/dataset_detail/?id=7) [2018 AIOPS挑战赛预赛训练集](http://iops.ai/dataset_detail/?id=6)
+  * 链接已经失效
+
+* [微软数据集](https://github.com/microsoft/cloud-monitoring-dataset)
+  * 有API的延迟,并且有带标签!!!
+
 
 ## Useful WeChat Official Accounts
 
-* 腾讯织云（腾讯的）
 * 智能运维前沿（清华裴丹团队的）
 * AIOps智能运维（百度的）
-* 华为产品可服务能力（华为的）
+
+
+
+# 自己的笔记
+
+
+
+## 1. 基础知识
+
+- [梦家](https://dreamhomes.top/posts/202106291700/)
+
+  讲解的真的很不错,基础知识讲的通透.也有介绍基础算法和最新前沿的算法.
+
+  但不是专门介绍运维方向的.
+
+## 2.算法
+
+- ARIMA 
+
+  - ARIMA相关论文
+
+    [8] A. H. Yaacob, I. K. Tan, S. F. Chien, and H. K. Tan, “Arima based network anomaly detection,” in Communication Software and Networks,2010. ICCSN’10. Second International Conference on. IEEE, 2010, pp. 205–209.
+
+  - 变式 SARIMA ,考虑季节性
+
+  - 代码
+
+- 聚类方法- DBSCAN.
+
+  优点:抗干扰
+
+  缺点:不能探测到change radically.
+
+  - 相关论文 [2019] Unsupervised Online Anomaly Detection with Parameter Adaptation for KPI Abrupt Changes
+  - [DBSCAN的基础知识](https://www.cxybb.com/article/qq_43634001/95938145)
+  - [视频](https://www.bilibili.com/video/BV124411j7Qx?spm_id_from=333.337.search-card.all.click)
+
+  - [代码](https://blog.csdn.net/huacha__/article/details/81094891)
+
+### python
+
+- [python中pandas读取文件用法]( https://blog.csdn.net/O_nice/article/details/119667178)
+
+  - pandas可以读取xlsx、xls文件,csv文件,txt文件
+  - 返回类型是[DataFrame](https://www.runoob.com/pandas/pandas-dataframe.html) 
+
+- [DataFrame 的Shift](https://blog.csdn.net/Miss_Audrey/article/details/117334170) 
+
+  - 整列往下移动一行
+
+    > **data['delay_1'] = data["delay"].shift(1)**
+
+- [DataFrame 运算的效率比较 ](https://zhuanlan.zhihu.com/p/97269320)
+
+  整组直接进行运算最快
+
+   DF['eee'] = DF['aaa'].values + DF['bbb'].values
+
+- [散点图教程](https://www.cnblogs.com/biyoulin/p/9565362.html)
+
